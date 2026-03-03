@@ -14,15 +14,9 @@ start.addEventListener("click",function(){
     alert("Please enter the name of both players");
     return;
    }
-  // On the current page — save names and redirect
-localStorage.setItem("player1", player1);
-localStorage.setItem("player2", player2);
-location.href = "home.html";
+   location.href="home.html";
+   alert("Welcome " + player1 + " and " + player2);
 
-// On home.html — read and display names
-let player1 = localStorage.getItem("player1");
-let player2 = localStorage.getItem("player2");
-welcome.innerHTML = `<i>${player1} VS ${player2}</i>`;
      
    })
   
