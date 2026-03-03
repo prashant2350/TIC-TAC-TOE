@@ -85,3 +85,21 @@ background-color: crimson;
     color: white;
     cursor: pointer;
 }
+.NewGame{
+     padding: 1rem;
+    font-size: 1.25rem;
+    background-color: black;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+}
+#msg{
+    font-size: 8vmin;
+    color: black;
+}
+.msgcontainer{
+    height: 30vmin;
+}
+.hide{
+    display: none;
+}
