@@ -4,7 +4,6 @@ let reset = document.querySelector(".reset");
 
 let x=document.querySelectorAll(".player");
 
-let welcome=document.body.querySelector("h2");
 let start=document.getElementById("start");
 let player1,player2;
 start.addEventListener("click",function(){
