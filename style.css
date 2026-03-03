@@ -43,6 +43,7 @@ background-color: crimson;
     border-radius: 1rem;
     border: none;
     color: white;
+    cursor:pointer;
 }
 
 .base{
@@ -92,6 +93,7 @@ background-color: crimson;
     border-radius: 1rem;
     border: none;
     color: white;
+    cursor: pointer;
 }
 #msg{
     font-size: 8vmin;
@@ -99,6 +101,7 @@ background-color: crimson;
 }
 .msgcontainer{
     height: 30vmin;
+    
 }
 .hide{
     display: none;

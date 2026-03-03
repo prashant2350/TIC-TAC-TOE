@@ -3,24 +3,12 @@ let reset = document.querySelector(".reset");
 let newgame=document.querySelector(".NewGame");
 let msgcontainer=document.querySelector(".msgcontainer");
 let msg=document.getElementById("msg");
-// let x=document.querySelectorAll(".player");
-// let start=document.getElementById("start");
-// let player1,player2;
-// start.addEventListener("click",function(){
-//     player1=x[0].value;
-//     player2=x[1].value;
-//    if(player1=="" || player2==""){
-//     alert("Please enter the name of both players");
-//     return;
-//    }
-//    location.href="home.html";
-//    alert("Welcome " + player1 + " and " + player2);
-//    })
-// ///
+
+
 const winPatterns=[
     [0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6] ];
-
-let turnO=false;;
+let count=0;
+let turnO=false;
 boxes.forEach((box) => {
     box.addEventListener("click",function(){
   if(turnO==false){
@@ -34,19 +22,34 @@ boxes.forEach((box) => {
    
   }
   box.disabled=true;
-});});
+  count++;
+  let isWINNER= checkWin();
+  if(count===9 && isWINNER==false){
+    msg.innerText="It is a draw!";
+    msgcontainer.classList.remove("hide");
+    disableBoxes();
+  }
+});
+checkWin();
+});
+// checked
 
 function resetgame(){
-reset.addEventListener("click",function(){
+
     boxes.forEach((box)=>{
         box.innerText="";
         box.disabled=false;
          turnO=false;
     msgcontainer.classList.add("hide");
     });
+}
     
-    
-});}
+    reset.addEventListener("click",resetgame);
+    newgame.addEventListener("click",resetgame);
+
+//checked 
+
+
 function disableBoxes(){
     boxes.forEach((box)=>{
         box.disabled=true;
@@ -55,20 +58,26 @@ function disableBoxes(){
 
 
 function showWinner(val){
+    console.log("show winner function called succcessfully");
     msg.innerText=`Winner is ${val}`;
     msgcontainer.classList.remove("hide");
+     disableBoxes();
 }
+
 function checkWin(){
     for(let pattern of winPatterns){
         let val1=boxes[pattern[0]].innerText;
         let val2=boxes[pattern[1]].innerText;
         let val3=boxes[pattern[2]].innerText;
-        if(val1!="" &&val2!="" &&val3!="" ){
+        if(val1!="" && val2!="" && val3!="" ){
             if(val1===val2 && val2===val3){
-                    disableBoxes();
+                console.log("checkwin fxn is working");
+                    
                 showWinner(val1);
+                return true;
             }
         }
-}msg.innerText="It is a draw!";
+    return false;
 }
-newgame.addEventListener("click",resetgame());
+
+}
