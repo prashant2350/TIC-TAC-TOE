@@ -3,23 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIC TAC TOE</title>
-     <link rel="stylesheet" href="style.css">
+    <title>TIC TAC TOE
+    </title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" type="image/x-icon" href="pic.png">
 </head>
 <body>
-      <h1>TIC TAC TOE</h1>
-    <input type="text" placeholder="Enter Player 1" class="player">
-    <input type="text" placeholder="Enter Player 2" class="player">
-    <button id="start">Start Game</button>
-    <div class="base">
+  <div class="msgcontainer">
+         <h1 id="text1">TIC TAC TOE</h1>
+         <p id="msg">Winner</p>
+         <button class="NewGame">New Game</button>
+         </div>
+    <div class="container">
+   
+    <div class="game">
+    <button class="box" id="0">X</button>
+     <button class="box" id="1">O</button>
+      <button class="box" id="2"></button>
+       <button class="box" id="3"></button>
+        <button class="box" id="4"></button>
+         <button class="box" id="5"></button>
+          <button class="box" id="6"></button>
+           <button class="box" id="7"></button>
+            <button class="box" id="8"></button>
+            </div>
+           <button class="reset">RESET</button>
+           <div class="winner">
+           
+           </div>
+           </div> 
+           <div class="base">
              <p id="name">Developed by Prashant Upadhyay</p>
              <i class="fa fa-linkedin-square" style="font-size:36px"></i>
              <a class ="link"href="https://www.linkedin.com/in/prashant-upadhyay-b34a3b375" target="_main">LinkedIn</a>
           <i class="fa fa-github" style="font-size:36px"></i>
           <a class="link" href="https://github.com/prashant2350" target="_main">GitHub</a>
             </div>
-            <script src="script.js"></script>
+           
+           <script src="script.js"></script>
 </body>
 </html>
