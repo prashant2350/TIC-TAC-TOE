@@ -30,7 +30,7 @@ boxes.forEach((box) => {
     disableBoxes();
   }
 });
-checkWin();
+
 });
 // checked
 
