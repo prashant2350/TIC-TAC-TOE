@@ -25,15 +25,17 @@ boxes.forEach((box) => {
   count++;
   let isWINNER= checkWin();
   if(count===9 && isWINNER==false){
-    msg.innerText="It is a draw!";
-    msgcontainer.classList.remove("hide");
-    disableBoxes();
+    draw();
   }
 });
 
 });
 // checked
-
+function draw(){
+      msg.innerText="It is a draw!";
+    msgcontainer.classList.remove("hide");
+    disableBoxes();
+}
 function resetgame(){
 
     boxes.forEach((box)=>{
