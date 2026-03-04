@@ -43,6 +43,7 @@ function resetgame(){
         box.disabled=false;
          turnO=false;
     msgcontainer.classList.add("hide");
+        return;
     });
 }
     
