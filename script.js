@@ -45,6 +45,7 @@ function resetgame(){
     msgcontainer.classList.add("hide");
         
     });
+    count=0;
 }
     
     reset.addEventListener("click",resetgame);
